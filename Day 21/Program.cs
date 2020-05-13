@@ -10,6 +10,7 @@ namespace Day_21
         {
             FirstTask();
             SecondTask();
+            ThirdTask();
 
             Console.Read();
         }
@@ -42,6 +43,19 @@ namespace Day_21
                 .Select(c => c == '5' ? 'u' : c).ToArray());
             Console.WriteLine(oldStr + " => " + newStr);
 
+            Console.WriteLine(lineSeperator);
+        }
+        static void ThirdTask()
+        {
+            string lineSeperator = new string('*', 25);
+            Console.WriteLine("Task 3...");
+
+            string inputedStr = "gdfgdf234dg54gf*23oP42";
+            string operatorStr = new String(inputedStr.Where(x => Char.IsPunctuation(x)).ToArray());
+            int A = int.Parse(new String(inputedStr.Where(x => Char.IsPunctuation(x) || Char.IsNumber(x)).ToArray()).Split(Convert.ToChar(operatorStr))[0]);
+            int B = int.Parse(new String(inputedStr.Where(x => Char.IsPunctuation(x) || Char.IsNumber(x)).ToArray()).Split(Convert.ToChar(operatorStr))[1]);
+            int results = operatorStr == "*" ? A * B : operatorStr == "/" ? A / B : operatorStr == "-" ? A - B : operatorStr == "+" ? 0 : A + B;
+            Console.WriteLine($"{inputedStr} => {A} {operatorStr} {B} = {results}"); 
             Console.WriteLine(lineSeperator);
         }
     }
