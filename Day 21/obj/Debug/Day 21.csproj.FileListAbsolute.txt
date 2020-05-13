@@ -1,1 +1,6 @@
 C:\Users\Faridun\Allif Academy\Day 21\Day 21\bin\Debug\Day 21.exe.config
+C:\Users\Faridun\Allif Academy\Day 21\Day 21\bin\Debug\Day 21.exe
+C:\Users\Faridun\Allif Academy\Day 21\Day 21\bin\Debug\Day 21.pdb
+C:\Users\Faridun\Allif Academy\Day 21\Day 21\obj\Debug\Day 21.csprojResolveAssemblyReference.cache
+C:\Users\Faridun\Allif Academy\Day 21\Day 21\obj\Debug\Day 21.exe
+C:\Users\Faridun\Allif Academy\Day 21\Day 21\obj\Debug\Day 21.pdb
