@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Day_21
 {
@@ -11,6 +13,7 @@ namespace Day_21
             FirstTask();
             SecondTask();
             ThirdTask();
+            FourthTask();
 
             Console.Read();
         }
@@ -57,6 +60,21 @@ namespace Day_21
             int results = operatorStr == "*" ? A * B : operatorStr == "/" ? A / B : operatorStr == "-" ? A - B : operatorStr == "+" ? 0 : A + B;
             Console.WriteLine($"{inputedStr} => {A} {operatorStr} {B} = {results}"); 
             Console.WriteLine(lineSeperator);
+        }
+        static void FourthTask()
+        {
+            string lineSeperator = new string('*', 25);
+            Console.WriteLine("Task 2...");
+
+            string textStr = "textCamel";
+            var editedText = textStr.Select(ch => ch.ToString()).Select(ch => char.IsUpper(char.Parse(ch)) ? " " + ch : ch);
+            Console.Write($"{textStr} => ");
+            foreach (var item in editedText)
+            {
+                Console.Write(item);
+            }
+
+            Console.WriteLine("\n" + lineSeperator);
         }
     }
 }
